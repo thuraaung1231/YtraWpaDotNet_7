@@ -8,6 +8,6 @@ namespace BookLibraryDTO.Utilities
 {
     internal class ConstantUtility
     {
-        public const string connectionStringYTRA = "Server=localhost;Initial Catalog=bookLibrary;User=root;Password=thuraaung1231;";
+        public const string connectionStringYTRA = "Server=localhost;Initial Catalog=bookLibrary;User=root;Password=WaiPhyo123!@#;";
     }
 }

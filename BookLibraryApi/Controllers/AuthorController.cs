@@ -1,6 +1,8 @@
 ﻿using BookLibraryDTO.Model;
 using BookLibraryDTO.Services;
 using Microsoft.AspNetCore.Mvc;
+using Refit;
+using System.Text.Json.Serialization;
 
 namespace BookLibraryApi.Controllers
 {
@@ -22,12 +24,14 @@ namespace BookLibraryApi.Controllers
         
             return Task.FromResult(response);
         }
-        [HttpPost]
+        [HttpGet]
         [Route("ListAuthor")]
         public Task<ResponseModel> ListAuthor()
         {
             ResponseModel response = new ResponseModel();
             response = _authorService.list();
+
+            
 
             return Task.FromResult(response);
         }
@@ -41,7 +45,7 @@ namespace BookLibraryApi.Controllers
             return Task.FromResult(response);
         }
         [HttpPost]
-        [Route("DeleteAuthor")]
+        [Route("DeleteAuthor/{id}")]
         public Task<ResponseModel> DeleteAuthor(int id)
         {
             ResponseModel response = new ResponseModel();
