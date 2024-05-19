@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\YTRAWPADotNet7.props" />
+</Project>
