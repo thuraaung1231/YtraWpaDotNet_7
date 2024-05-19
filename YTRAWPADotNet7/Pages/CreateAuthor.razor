@@ -1,0 +1,84 @@
+﻿@page "/CreateAuthor"
+@using BookLibraryDTO.Model
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigate
+@using MudBlazor
+@using YTRAWPADotNet7.Interface;
+@inject IAPIRoutes ApiService;
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<EditForm Model="@Author" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12" sm="7" Class="mx-auto">
+            <MudCard>
+                <MudCardContent>
+                    <MudText Align="Align.Center" Class="mb-4 fs-4">Add Author</MudText>
+                    @if (files != null)
+                    {
+                        <MudImage Src="@("/Images/" + files.Name)" Class="w-25"></MudImage>
+
+                    }
+                    <MudTextField Label="Name" HelperText="Author's Name"
+                    @bind-Value="Author.name" For="@(() => Author.name)" />
+                    <MudTextField Label="Email" Class="mt-3" HelperText="Author's Email Address"
+                    @bind-Value="Author.email" For="@(() => Author.email)" />
+                    <MudTextField Label="Phone Number" HelperText="Author's PhoneNumber"
+                    @bind-Value="Author.phoneNumber" For="@(() => Author.phoneNumber)" />
+                    <MudFileUpload T="IBrowserFile" FilesChanged="UploadFiles">
+                        <ButtonTemplate Context="UploadContext">
+                            <MudButton HtmlTag="label"
+                                       Variant="Variant.Filled"
+                                       Color="Color.Primary"
+                                       StartIcon="@Icons.Material.Filled.CloudUpload"
+                                       for="@UploadContext.Id">
+                                Upload Book Cover
+                            </MudButton>
+                        </ButtonTemplate>
+                    </MudFileUpload>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton ButtonType="ButtonType.Reset" Variant="Variant.Filled" Class="d-inline-flex ms-auto" Color="Color.Dark">Cancel</MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ms-2 d-inline-flex" @onclick="@AddAuthor">Add Author</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+
+    </MudGrid>
+</EditForm>
+@code {
+    AuthorEntity Author=new AuthorEntity();
+    ResponseModel responseData = new ResponseModel();
+    bool success;
+    IBrowserFile files;
+
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+
+    private async Task AddAuthor()
+    {
+        Author.is_delete = false;
+        Author.created_date = DateTime.Now;
+        Author.photo = files.Name;
+        responseData =await ApiService.CreateAuthor(Author);
+        if (responseData.resCode == "I001")
+        {
+            Navigate.NavigateTo("GetAuthorList");
+        }
+        else
+        {
+            Navigate.NavigateTo("GetAuthorList");
+        }
+    }
+    private void UploadFiles(IBrowserFile file)
+    {
+        files = file;
+        
+    }
+
+}
+
