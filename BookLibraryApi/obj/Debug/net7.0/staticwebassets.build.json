@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "f5vYQWKQac76olmr6rgxQy2ryKQRI4VhRzndEZIa/24=",
+  "Hash": "0/qbwmQ+wLZ7vwnIBZxEoMgBWtDvjQeWOBMzguKVZ1Q=",
   "Source": "BookLibraryApi",
   "BasePath": "_content/BookLibraryApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\YTRAWPADotNet7.csproj",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\YTRAWPADotNet7.csproj",
       "Version": 2,
       "Source": "YTRAWPADotNet7",
       "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
@@ -22,17 +22,51 @@
     {
       "Name": "YTRAWPADotNet7\\wwwroot",
       "Source": "YTRAWPADotNet7",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\BookLibraryApi\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BookLibraryApi.styles.css",
+      "Identity": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.css",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.css"
+    },
+    {
+      "Identity": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.js",
+      "SourceId": "MudBlazor",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\",
+      "BasePath": "_content/MudBlazor",
+      "RelativePath": "MudBlazor.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\itstu\\.nuget\\packages\\mudblazor\\6.19.1\\staticwebassets\\MudBlazor.min.js"
+    },
+    {
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\BookLibraryApi\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BookLibraryApi.styles.css",
       "SourceId": "BookLibraryApi",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\BookLibraryApi\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\BookLibraryApi\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BookLibraryApi",
       "RelativePath": "BookLibraryApi.styles.css",
       "AssetKind": "All",
@@ -43,13 +77,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\BookLibraryApi\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BookLibraryApi.styles.css"
+      "OriginalItemSpec": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\BookLibraryApi\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BookLibraryApi.styles.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\YTRAWPADotNet7.bundle.scp.css",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\YTRAWPADotNet7.bundle.scp.css",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "YTRAWPADotNet7.bundle.scp.css",
       "AssetKind": "All",
@@ -60,13 +94,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\YTRAWPADotNet7.bundle.scp.css"
+      "OriginalItemSpec": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\YTRAWPADotNet7.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -80,10 +114,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -97,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -114,10 +148,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -131,10 +165,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -148,10 +182,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -165,10 +199,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -182,10 +216,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -199,10 +233,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -216,10 +250,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -233,10 +267,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -250,10 +284,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\css\\site.css",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\site.css",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -267,10 +301,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\favicon.png",
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\favicon.png",
       "SourceId": "YTRAWPADotNet7",
       "SourceType": "Project",
-      "ContentRoot": "C:\\Users\\User\\source\\repos\\YTRAWPADotNet7\\YTRAWPADotNet7\\wwwroot\\",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
       "BasePath": "_content/YTRAWPADotNet7",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
