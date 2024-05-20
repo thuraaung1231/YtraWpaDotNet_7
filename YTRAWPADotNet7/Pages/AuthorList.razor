@@ -7,8 +7,9 @@
 @inject IAPIRoutes ApiService;
 @using BookLibraryDTO.Model
 @using Newtonsoft.Json
-
-<MudDataGrid T="AuthorEntity" MultiSelection="true" Class="col-10 overflow-x-scroll" FixedHeader=true Height="100vh" Items="@Elements" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
+@using YTRAWPADotNet7.Components
+<HeaderComponent Name="CreateAuthor" List="GetAuthorList"></HeaderComponent>
+<MudDataGrid T="AuthorEntity" MultiSelection="true" Class="col-12 overflow-x-scroll" FixedHeader=true Height="100vh" Items="@Elements" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
              Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged">
     <ToolBarContent>
         <MudText Typo="Typo.h6">Book List</MudText>
@@ -22,8 +23,16 @@
         <PropertyColumn Property="x => x.name" Class="bg-primary text-light" SortBy="@_sortBy" />
         <PropertyColumn Property="x => x.phoneNumber" Class="bg-primary text-light " />
         <PropertyColumn Property="x => x.email" Class="bg-primary text-light " />
-        <PropertyColumn Property="x => x.created_date" Class="bg-primary text-light " Title="Molar mass" />
-        <PropertyColumn Property="x => x.updated_date" Class="bg-primary text-light" Title="Category" />
+        <PropertyColumn Property="x => x.created_date" Class="bg-primary text-light " Title="Created At" />
+        <PropertyColumn Property="x => x.updated_date" Class="bg-primary text-light" Title="Updated At" />
+        <TemplateColumn Filterable="false" Title="Author Photo" Class="bg-primary text-light">
+            <CellTemplate Context="context">
+                @{
+                    var coverPhotoUrl = "/Images/" + context.Item.photo;
+                }
+                <MudImage Src="@coverPhotoUrl" Class="w-50" />
+            </CellTemplate>
+        </TemplateColumn>
         <TemplateColumn Filterable="false" Title="Edit" Class="mx-auto bg-primary text-light">
             <CellTemplate Context="context">
                 <MudButton Variant="Variant.Filled" Color="Color.Tertiary" @onclick="(() => EditAuthor(context.Item.id))">

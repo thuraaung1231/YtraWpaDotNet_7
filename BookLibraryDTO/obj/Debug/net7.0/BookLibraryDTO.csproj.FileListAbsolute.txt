@@ -22,3 +22,15 @@ D:\AllC#\C#Exercises\GitCollabration\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\ne
 D:\AllC#\C#Exercises\GitCollabration\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\refint\BookLibraryDTO.dll
 D:\AllC#\C#Exercises\GitCollabration\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\BookLibraryDTO.pdb
 D:\AllC#\C#Exercises\GitCollabration\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\ref\BookLibraryDTO.dll
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\bin\Debug\net7.0\BookLibraryDTO.deps.json
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\bin\Debug\net7.0\BookLibraryDTO.dll
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\bin\Debug\net7.0\BookLibraryDTO.pdb
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\BookLibraryDTO.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\BookLibraryDTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\BookLibraryDTO.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\BookLibraryDTO.AssemblyInfo.cs
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\BookLibraryDTO.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\BookLibraryDTO.dll
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\refint\BookLibraryDTO.dll
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\BookLibraryDTO.pdb
+C:\Users\User\source\repos\YtraWpaDotNet_7\BookLibraryDTO\obj\Debug\net7.0\ref\BookLibraryDTO.dll

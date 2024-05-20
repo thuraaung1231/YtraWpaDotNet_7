@@ -1,0 +1,116 @@
+﻿@page "/CreateBook"
+@using BookLibraryDTO.Model
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigate
+@using MudBlazor
+@using Newtonsoft.Json;
+@using YTRAWPADotNet7.Interface;
+@inject IAPIRoutes ApiService;
+@using YTRAWPADotNet7.Components
+
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<HeaderComponent Name="CreateBook" List="GetBookList"></HeaderComponent>
+<EditForm Model="@Book" OnValidSubmit="OnValidSubmit" class="mt-2">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12" sm="7" Class="mx-auto">
+            <MudCard>
+                <MudCardContent>
+                    <MudText Align="Align.Center" Class="mb-4 fs-4">Add Book</MudText>
+                    @if (files != null)
+                    {
+                        <MudImage Src="@("/Images/" + files.Name)" Class="w-25"></MudImage>
+
+                    }
+                    <MudTextField Label="Name" HelperText="Book Name"
+                    @bind-Value="Book.name" For="@(() => Book.name)" />
+                    <MudTextField Label="bookType" Class="mt-3" HelperText="Book Type"
+                    @bind-Value="Book.bookType" For="@(() => Book.bookType)" />
+                    <MudTextField Label="description" HelperText="description"
+                    @bind-Value="Book.description" For="@(() => Book.description)" />
+                    <MudFileUpload T="IBrowserFile" FilesChanged="UploadFiles">
+                        <ButtonTemplate Context="UploadContext">
+                            <MudButton HtmlTag="label"
+                                       Variant="Variant.Filled"
+                                       Color="Color.Primary"
+                                       StartIcon="@Icons.Material.Filled.CloudUpload"
+                                       for="@UploadContext.Id">
+                                Upload Book Cover
+                            </MudButton>
+                        </ButtonTemplate>
+                    </MudFileUpload>
+                    <select class="form-select" aria-label="Default select example" @bind="Book.author_id">
+                        <option selected>Author List</option>
+                        @foreach (var item in Elements)
+                        {
+                            <option value="@item.id">@item.name</option>
+                        }
+                    
+                     
+                    </select>
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton ButtonType="ButtonType.Reset" Variant="Variant.Filled" Class="d-inline-flex ms-auto" Color="Color.Dark">Cancel</MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ms-2 d-inline-flex" @onclick="@AddBook">Add Book</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+
+    </MudGrid>
+</EditForm>
+@code {
+    List<AuthorEntity> Elements = new List<AuthorEntity>();
+ 
+    BookEntity Book=new BookEntity();
+    ResponseModel responseData = new ResponseModel();
+    bool success;
+    IBrowserFile? files;
+
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+
+    private async Task AddBook()
+    {
+        Book.is_delete = false;
+        Book.created_date = DateTime.Now;
+        Book.coverPhoto = files.Name;
+        responseData =await ApiService.CreateBook(Book);
+        if (responseData.resCode == "I001")
+        {
+            Navigate.NavigateTo("GetBookList");
+        }
+        else
+        {
+            Navigate.NavigateTo("GetBookList");
+        }
+    }
+    private void UploadFiles(IBrowserFile file)
+    {
+        files = file;
+        
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            responseData = await ApiService.AuthorList();
+            // string JsonData = JsonConvert.SerializeObject(responseData.resData);
+            Elements = JsonConvert.DeserializeObject<List<AuthorEntity>>(responseData.resData.ToString());
+
+        }
+        catch (Exception ex)
+        {
+            // Handle the exception, log it, or show an error message
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+
+    }
+
+
+}
+

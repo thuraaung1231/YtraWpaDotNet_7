@@ -5,13 +5,17 @@ using MudBlazor.Services;
 using YTRAWPADotNet7.Interface;
 using Refit;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddMudServices();
+
+
 builder.Services.AddRefitClient<IAPIRoutes>().ConfigureHttpClient(c => c.BaseAddress = new Uri("https://localhost:7019/WebAPI"));
 
 var app = builder.Build();
