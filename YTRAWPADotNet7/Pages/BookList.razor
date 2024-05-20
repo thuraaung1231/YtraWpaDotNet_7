@@ -1,0 +1,160 @@
+﻿@page "/GetBookList"
+@using MudBlazor
+<MudThemeProvider />
+<MudDialogProvider />
+@inject NavigationManager navigate
+@using YTRAWPADotNet7.Interface;
+@inject IAPIRoutes ApiService;
+@using BookLibraryDTO.Model
+@using Newtonsoft.Json
+@using YTRAWPADotNet7.Components
+
+<HeaderComponent Name="CreateBook" List="GetBookList"></HeaderComponent>
+<MudDataGrid T="BookEntity" MultiSelection="true" Class="col-12 overflow-x-scroll" FixedHeader=true Height="100vh" Items="@Elements" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
+             Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged">
+    <ToolBarContent>
+        <MudText Typo="Typo.h6">Book List</MudText>
+        <MudSpacer />
+        <MudTextField @bind-Value="_searchString" Placeholder="Search" Adornment="Adornment.Start" Immediate="true"
+                      AdornmentIcon="@Icons.Material.Filled.Search" IconSize="Size.Medium" Class="mt-0"></MudTextField>
+    </ToolBarContent>
+    <Columns>
+
+        <PropertyColumn Property="x => x.id" Class="bg-primary text-light" Title="Nr" Sortable="false" Filterable="false" />
+        <PropertyColumn Property="x => x.name" Class="bg-primary text-light" SortBy="@_sortBy" />
+        <PropertyColumn Property="x => x.description" Class="bg-primary text-light " />
+        <PropertyColumn Property="x => x.author_id" Class="bg-primary text-light " />
+        <PropertyColumn Property="x => x.coverPhoto" Class="bg-primary text-light "  />
+       
+        <TemplateColumn Filterable="false" Title="Cover Photo" Class="bg-primary text-light">
+            <CellTemplate Context="context">
+                @{
+                    var coverPhotoUrl = "/Images/" + context.Item.coverPhoto;
+                }
+                <MudImage Src="@coverPhotoUrl" Class="w-50"/>
+            </CellTemplate>
+        </TemplateColumn>
+        <TemplateColumn Filterable="false" Title="Edit" Class="mx-auto bg-primary text-light">
+            <CellTemplate Context="context">
+                <MudButton Variant="Variant.Filled" Color="Color.Tertiary" @onclick="(() => EditBook(context.Item.id))">
+                    <i class="fa-solid fa-pen-to-square me-1"></i>edit
+                </MudButton>
+            </CellTemplate>
+        </TemplateColumn>
+        <TemplateColumn Filterable="false" Title="Delete" Class="mx-auto bg-primary text-light">
+            <CellTemplate Context="context">
+                <MudButton Variant="Variant.Filled" Color="Color.Error" @onclick="(()=>DeleteBook(context.Item.id))" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-trash me-1"></i>delete</MudButton>
+
+            </CellTemplate>
+        </TemplateColumn>
+    </Columns>
+    <PagerContent>
+        <MudDataGridPager T="BookEntity" />
+    </PagerContent>
+</MudDataGrid>
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are You Sure To Delete?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" @onclick="()=>DeleteConfirm(bookId)">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@code {
+    List<BookEntity> Elements = new List<BookEntity>();
+    ResponseModel responseData = new ResponseModel();
+    private string _searchString;
+    private bool _sortNameByLength;
+    int bookId;
+    private List<string> _events = new();
+    // custom sort by name length
+    private Func<BookEntity, object> _sortBy => x =>
+    {
+        if (_sortNameByLength)
+            return x.name.Length;
+        else
+            return x.name;
+
+    };
+    // quick filter - filter globally across multiple columns with the same input
+    private Func<BookEntity, bool> _quickFilter => x =>
+    {
+        if (string.IsNullOrWhiteSpace(_searchString))
+            return true;
+
+        if (x.name.Contains(_searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        if (x.bookType.Contains(_searchString, StringComparison.OrdinalIgnoreCase))
+            return true;
+
+        return false;
+    };
+    private void EditBook(int id)
+    {
+        navigate.NavigateTo($"EditBook/{id}");
+    }
+    private async Task DeleteConfirm(int id)
+    {
+
+        responseData = await ApiService.DeleteBook(id);
+        if (responseData.resCode=="I0001")
+        {
+
+            navigate.NavigateTo(navigate.Uri, forceLoad: true);
+        }
+
+
+            navigate.NavigateTo("GetBookList");
+        
+    }
+    private void DeleteBook(int id)
+    {
+        bookId = id;
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            responseData = await ApiService.BookList();
+            // string JsonData = JsonConvert.SerializeObject(responseData.resData);
+            Elements = JsonConvert.DeserializeObject<List<BookEntity>>(responseData.resData.ToString());
+
+        }
+        catch (Exception ex)
+        {
+            // Handle the exception, log it, or show an error message
+            Console.WriteLine($"An error occurred: {ex.Message}");
+        }
+        
+    }
+
+    // events
+    void RowClicked(DataGridRowClickEventArgs<BookEntity> args)
+    {
+        _events.Insert(0, $"Event = RowClick, Index = {args.RowIndex}, Data = {System.Text.Json.JsonSerializer.Serialize(args.Item)}");
+    }
+
+    void RowRightClicked(DataGridRowClickEventArgs<BookEntity> args)
+    {
+        _events.Insert(0, $"Event = RowRightClick, Index = {args.RowIndex}, Data = {System.Text.Json.JsonSerializer.Serialize(args.Item)}");
+    }
+
+    void SelectedItemsChanged(HashSet<BookEntity> items)
+    {
+        _events.Insert(0, $"Event = SelectedItemsChanged, Data = {System.Text.Json.JsonSerializer.Serialize(items)}");
+    }
+}

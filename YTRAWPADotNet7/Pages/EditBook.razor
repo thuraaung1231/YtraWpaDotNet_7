@@ -1,0 +1,115 @@
+﻿@page "/EditBook/{id:int}"
+@using BookLibraryDTO.Model
+@using System.ComponentModel.DataAnnotations
+@inject NavigationManager Navigate
+@using MudBlazor
+@using YTRAWPADotNet7.Interface;
+@inject IAPIRoutes ApiService;
+@using Newtonsoft.Json
+<MudThemeProvider />
+<MudDialogProvider />
+<MudSnackbarProvider />
+<EditForm Model="@bookEntity" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator />
+    <MudGrid>
+        <MudItem xs="12" sm="7" Class="mx-auto">
+            <MudCard>
+                <MudCardContent>
+                    <MudText Align="Align.Center" Class="mb-4 fs-4">Edit Book</MudText>
+                    @if (files != null)
+                    {
+                        <MudImage Src="@("/Images/" + files.Name)" Class="w-25"></MudImage>
+
+                    }
+                    else
+                    {
+                        <MudImage Src="@("/Images/" + bookEntity.coverPhoto)" Class="w-25"></MudImage>
+                    }
+                    <MudTextField Label="Name" HelperText="Author's Name"
+                    @bind-Value="bookEntity.name" For="@(() => bookEntity.name)" />
+                    <MudTextField Label="Email" Class="mt-3" HelperText="Author's Email Address"
+                    @bind-Value="bookEntity.bookType" For="@(() => bookEntity.bookType)" />
+                    <MudTextField Label="Phone Number" HelperText="Author's PhoneNumber"
+                    @bind-Value="bookEntity.description" For="@(() => bookEntity.description)" />
+                    <MudFileUpload T="IBrowserFile" FilesChanged="UploadFiles">
+                        <ButtonTemplate Context="UploadContext">
+                            <MudButton HtmlTag="label"
+                                       Variant="Variant.Filled"
+                                       Color="Color.Primary"
+                                       StartIcon="@Icons.Material.Filled.CloudUpload"
+                                       for="@UploadContext.Id">
+                                Upload Book Cover
+                            </MudButton>
+                        </ButtonTemplate>
+                    </MudFileUpload>
+                    <select class="form-select" aria-label="Default select example" @bind="bookEntity.author_id">
+                     
+                        @foreach (var item in authorEntity)
+                        {
+                            if (bookEntity.author_id==item.id)
+                            {
+                                <option value="@item.id" selected>@item.name</option>
+                            }
+                            <option value="@item.id">@item.name</option>
+                        }
+
+
+                    </select>
+
+                </MudCardContent>
+                <MudCardActions>
+                    <MudButton ButtonType="ButtonType.Reset" Variant="Variant.Filled" Class="d-inline-flex ms-auto" Color="Color.Dark">Cancel</MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ms-2 d-inline-flex" @onclick="@UpdateAuthor">Update Book</MudButton>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+
+    </MudGrid>
+</EditForm>
+@code{
+    [Parameter]
+    public int id{ get; set; }
+    BookEntity bookEntity = new BookEntity();
+    List<AuthorEntity> authorEntity = new List<AuthorEntity>();
+    ResponseModel responseBookModel = new ResponseModel();
+    ResponseModel responseAuthorModel = new ResponseModel();
+
+    protected override async Task OnInitializedAsync()
+    {
+        responseBookModel = await ApiService.GetByBookId(id);
+        bookEntity = JsonConvert.DeserializeObject<BookEntity>(responseBookModel.resData.ToString());
+        responseAuthorModel = await ApiService.AuthorList();
+      
+       authorEntity = JsonConvert.DeserializeObject<List<AuthorEntity>>(responseAuthorModel.resData.ToString());
+
+    }
+
+    bool success;
+    IBrowserFile files;
+
+    private void OnValidSubmit(EditContext context)
+    {
+        success = true;
+        StateHasChanged();
+    }
+
+    private async Task UpdateAuthor()
+    {
+        
+        bookEntity.coverPhoto = files.Name;
+        responseBookModel = await ApiService.UpdateBook(bookEntity);
+        if (responseBookModel.resCode == "I001")
+        {
+            Navigate.NavigateTo("GetBookList");
+        }
+        else
+        {
+            Navigate.NavigateTo("GetBookList");
+        }
+    }
+    private void UploadFiles(IBrowserFile file)
+    {
+        files = file;
+
+    }
+}

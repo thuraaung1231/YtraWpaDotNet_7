@@ -5,10 +5,14 @@
 @using MudBlazor
 @using YTRAWPADotNet7.Interface;
 @inject IAPIRoutes ApiService;
+@using YTRAWPADotNet7.Components;
+
+
 <MudThemeProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
-<EditForm Model="@Author" OnValidSubmit="OnValidSubmit">
+<HeaderComponent Name="CreateAuthor" List="GetAuthorList"></HeaderComponent>
+<EditForm Model="@Author" OnValidSubmit="OnValidSubmit" class="mt-4">
     <DataAnnotationsValidator />
     <MudGrid>
         <MudItem xs="12" sm="7" Class="mx-auto">

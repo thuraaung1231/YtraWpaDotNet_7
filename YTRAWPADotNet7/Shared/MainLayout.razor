@@ -1,19 +1,35 @@
 ﻿@inherits LayoutComponentBase
-
+@using YTRAWPADotNet7.Components
+@inject NavigationManager navigate
 <PageTitle>YTRAWPADotNet7</PageTitle>
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
+  
     <main>
         <div class="top-row px-4">
+            <button class="btn btn-primary me-2" @onclick="CreateAuthor" >Author</button>
+            <button class="btn btn-primary" @onclick="CreateBook">Book</button>
+            <button class="btn btn-primary" @onclick="CreateDashBoard">DashBoard</button>
+           
             <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
         </div>
 
-        <article class="content px-4">
+        <article class="content px-4 bg-secondary">
             @Body
         </article>
     </main>
 </div>
+@code{
+    private async void CreateAuthor()
+    {
+        navigate.NavigateTo("CreateAuthor");
+    }
+    private async void CreateBook()
+    {
+        navigate.NavigateTo("CreateBook");
+    }
+    private async void CreateDashBoard()
+    {
+        navigate.NavigateTo("DashBoard");
+    }
+}

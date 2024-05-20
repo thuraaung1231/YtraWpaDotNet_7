@@ -21,6 +21,10 @@
                         <MudImage Src="@("/Images/" + files.Name)" Class="w-25"></MudImage>
 
                     }
+                    else
+                    {
+                        <MudImage Src="@("/Images/" +authorEntity.photo)" Class="w-25"></MudImage>
+                    }
                     <MudTextField Label="Name" HelperText="Author's Name"
                     @bind-Value="authorEntity.name" For="@(() => authorEntity.name)" />
                     <MudTextField Label="Email" Class="mt-3" HelperText="Author's Email Address"

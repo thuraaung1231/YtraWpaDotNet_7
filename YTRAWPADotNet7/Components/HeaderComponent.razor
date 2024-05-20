@@ -1,0 +1,42 @@
+﻿
+@using MudBlazor
+
+@inject NavigationManager navigate
+
+
+<MudTabs Elevation="4" Rounded="true" AlwaysShowScrollButtons="true" Color="Color.Primary"  class="m-0 bg-primary row">
+ 
+  
+     <MudTabPanel Text="@Name"  @onclick="()=>CreateName()"/> 
+    <MudTabPanel Text="@List" @onclick="()=>GoToList()"/>
+    <MudTabPanel Text="@Dashboard" @onclick="()=>GoToDashBoard()" />
+   
+</MudTabs>
+
+
+
+@code {
+    [Parameter]
+    public string Name { get; set; }
+    [Parameter]
+    public string List { get; set; }
+    [Parameter]
+    public string Dashboard { get; set; }
+
+
+    private async void CreateName()
+    {
+        var CreateUrl = "/" + Name;
+        navigate.NavigateTo(CreateUrl);
+    }
+    private async void GoToList()
+    {
+        var ListUrl = "/" + List;
+        navigate.NavigateTo(ListUrl);
+    }
+    private async void GoToDashBoard()
+    {
+       
+        navigate.NavigateTo("/DashBoard");
+    }
+}
