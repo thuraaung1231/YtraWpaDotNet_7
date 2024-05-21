@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[7.0.12, )"
             },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -214,6 +218,10 @@
             "Refit.HttpClientFactory": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
             }
           },
           "imports": [

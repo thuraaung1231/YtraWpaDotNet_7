@@ -4,7 +4,7 @@ using YTRAWPADotNet7.Data;
 using MudBlazor.Services;
 using YTRAWPADotNet7.Interface;
 using Refit;
-
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 

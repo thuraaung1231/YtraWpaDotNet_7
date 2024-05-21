@@ -9,6 +9,7 @@
 @using Newtonsoft.Json
 @using YTRAWPADotNet7.Components
 
+
 <HeaderComponent Name="CreateBook" List="GetBookList"></HeaderComponent>
 <MudDataGrid T="BookEntity" MultiSelection="true" Class="col-12 overflow-x-scroll" FixedHeader=true Height="100vh" Items="@Elements" SortMode="SortMode.Multiple" Filterable="true" QuickFilter="@_quickFilter"
              Hideable="true" RowClick="@RowClicked" RowContextMenuClick="RowRightClicked" SelectedItemsChanged="@SelectedItemsChanged">

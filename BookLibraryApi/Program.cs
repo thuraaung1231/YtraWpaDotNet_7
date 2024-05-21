@@ -1,5 +1,6 @@
 using BookLibraryDTO.DAO;
 using BookLibraryDTO.Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<MyDbContext>();
 builder.Services.AddScoped<BookService>();
 builder.Services.AddScoped<AuthorService>();
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("Log/myLog_file.txt",rollingInterval:RollingInterval.Day)
+    .CreateLogger();
 
 var app = builder.Build();
 
