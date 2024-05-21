@@ -593,7 +593,8 @@
           "MudBlazor": "6.19.1",
           "Newtonsoft.Json": "13.0.3",
           "Refit": "7.0.0",
-          "Refit.HttpClientFactory": "7.0.0"
+          "Refit.HttpClientFactory": "7.0.0",
+          "Serilog.AspNetCore": "8.0.1"
         },
         "runtime": {
           "YTRAWPADotNet7.dll": {}

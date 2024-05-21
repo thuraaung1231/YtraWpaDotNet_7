@@ -20,6 +20,23 @@ namespace YTRAWPADotNet7.Interface
 
         [Post("/Author/UpdateAuthor")]
         Task<ResponseModel> UpdateAuthor(AuthorEntity authorEntity);
+
+
+
+        [Post("/Book/CreateBook")]
+        Task<ResponseModel> CreateBook(BookEntity Book);
+
+        [Post("/Book/ListBook")]
+        Task<ResponseModel> BookList();
+
+        [Post("/Book/DeleteBook/{id}")]
+        Task<ResponseModel> DeleteBook(int id);
+
+        [Post("/Book/GetByBookId/{id}")]
+        Task<ResponseModel> GetByBookId(int id);
+
+        [Post("/Book/UpdateBook")]
+        Task<ResponseModel> UpdateBook(BookEntity Book);
         //[Post("/Student/GetStudentById/{id}")]
         //Task<StudentModel> GetStudentById(int id);
 

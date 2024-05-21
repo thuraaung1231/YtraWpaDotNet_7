@@ -13,6 +13,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<MyDbContext>();
 builder.Services.AddScoped<BookService>();
 builder.Services.AddScoped<AuthorService>();
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Information()
+    .WriteTo.Console()
+    .WriteTo.File("Log/myLog_file.txt",rollingInterval:RollingInterval.Day)
+    .CreateLogger();
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()

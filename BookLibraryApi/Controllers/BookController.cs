@@ -1,6 +1,7 @@
 ﻿using BookLibraryDTO.Model;
 using BookLibraryDTO.Services;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 
 namespace BookLibraryApi.Controllers
 {
@@ -29,9 +30,11 @@ namespace BookLibraryApi.Controllers
         {
             ResponseModel response = new ResponseModel();
             response = _BookService.list();
+            Log.Information("BookLog => {@response} ", response);
 
             return Task.FromResult(response);
         }
+
         [HttpPost]
         [Route("UpdateBook")]
         public Task<ResponseModel> UpdateBook(BookEntity bookEntity)
@@ -42,7 +45,7 @@ namespace BookLibraryApi.Controllers
             return Task.FromResult(response);
         }
         [HttpPost]
-        [Route("DeleteBook")]
+        [Route("DeleteBook/{id}")]
         public Task<ResponseModel> DeleteBook(int id)
         {
             ResponseModel response = new ResponseModel();
@@ -51,7 +54,7 @@ namespace BookLibraryApi.Controllers
             return Task.FromResult(response);
         }
         [HttpPost]
-        [Route("GetByBookId")]
+        [Route("GetByBookId/{id}")]
         public Task<ResponseModel> GetByBookId(int id)
         {
             ResponseModel response = new ResponseModel();

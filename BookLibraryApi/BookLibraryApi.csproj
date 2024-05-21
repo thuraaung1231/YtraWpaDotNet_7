@@ -15,6 +15,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BookLibraryDTO\BookLibraryDTO.csproj" />
     <ProjectReference Include="..\YTRAWPADotNet7\YTRAWPADotNet7.csproj" />
+	  <PackageReference Include="Serilog.AspNetCore" Version="8.0.1" />
   </ItemGroup>
 
 </Project>

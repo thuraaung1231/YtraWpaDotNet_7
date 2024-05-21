@@ -1,0 +1,40 @@
+﻿@page "/DashBoard"
+@using MudBlazor
+<MudThemeProvider />
+<MudDialogProvider />
+@inject NavigationManager navigate
+@using YTRAWPADotNet7.Interface;
+@inject IAPIRoutes ApiService;
+@using BookLibraryDTO.Model
+@using Newtonsoft.Json;
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        @foreach(var book in bookentity)
+        {
+         
+                <div class="card m-3" style="width: 18rem;">
+                <div class="p-2 w-100 h-100 d-flex justify-content-center align-items-center">
+                    <img src="/Images/@book.coverPhoto" class="card-img-top w-75 mx-auto" alt="coverphoto">
+                </div>
+                    <div class="card-body">
+                    <p class="fw-bold fs-6 text-center text-decoration-underline">@book.name</p>
+                    <p class=" fs-6 p-0 m-0">-@book.bookType</p>
+                    <p class=" fs-6 p-0 m-0">-@book.description</p>
+                    </div>
+                </div>
+           
+        }
+    </div>
+</div>
+
+@code {
+    List<BookEntity> bookentity = new List<BookEntity>();
+    ResponseModel responseModel = new ResponseModel();
+    protected override async Task OnInitializedAsync()
+    {
+        responseModel = await ApiService.BookList();
+        bookentity =JsonConvert.DeserializeObject<List<BookEntity>>(responseModel.resData.ToString());
+    }
+
+}

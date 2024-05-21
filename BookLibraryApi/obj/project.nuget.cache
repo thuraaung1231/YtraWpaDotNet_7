@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wPnZguKHTQEK6NnRn/zgqzhaN37xpCn/QUIvtynAfdvb3i4s4UgceXh57eB2Tcq7Gxbu9KGNjb9dEL5NHrhKSQ==",
+  "dgSpecHash": "CGpwvHQqBlOFwKRplK/Vzu2FmFSDHDGp+FBzu5vsVsDdXKMVgKIeDti4RQHzZwbqnBxF2107Sfbbx1k9P7daNA==",
   "success": true,
   "projectFilePath": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\BookLibraryApi\\BookLibraryApi.csproj",
   "expectedPackageFiles": [
@@ -60,5 +60,12 @@
     "C:\\Users\\itstu\\.nuget\\packages\\system.text.encodings.web\\8.0.0\\system.text.encodings.web.8.0.0.nupkg.sha512",
     "C:\\Users\\itstu\\.nuget\\packages\\system.text.json\\8.0.0\\system.text.json.8.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\BookLibraryApi\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
