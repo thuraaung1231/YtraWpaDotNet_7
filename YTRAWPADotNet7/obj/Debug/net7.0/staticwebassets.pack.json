@@ -1,11 +1,10 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\YTRAWPADotNet7.bundle.scp.css",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\YTRAWPADotNet7.bundle.scp.css",
       "PackagePath": "staticwebassets\\YTRAWPADotNet7.bundle.scp.css"
     },
     {
-<<<<<<< HEAD
       "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\1a.png",
       "PackagePath": "staticwebassets\\Images\\1a.png"
     },
@@ -18,90 +17,87 @@
       "PackagePath": "staticwebassets\\Images\\6a.png"
     },
     {
-      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-=======
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Boy.jpg",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Boy.jpg",
       "PackagePath": "staticwebassets\\Images\\Boy.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Boy1.jpg",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Boy1.jpg",
       "PackagePath": "staticwebassets\\Images\\Boy1.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Girl.jpg",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Girl.jpg",
       "PackagePath": "staticwebassets\\Images\\Girl.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Girl2.jpg",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Girl2.jpg",
       "PackagePath": "staticwebassets\\Images\\Girl2.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Girl3.jpg",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Girl3.jpg",
       "PackagePath": "staticwebassets\\Images\\Girl3.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Girl4.jpg",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\Girl4.jpg",
       "PackagePath": "staticwebassets\\Images\\Girl4.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\boy2.jpg",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\boy2.jpg",
       "PackagePath": "staticwebassets\\Images\\boy2.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\boy3.jpg",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\boy3.jpg",
       "PackagePath": "staticwebassets\\Images\\boy3.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
->>>>>>> main
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\site.css",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\User\\source\\repos\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\favicon.png",
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
