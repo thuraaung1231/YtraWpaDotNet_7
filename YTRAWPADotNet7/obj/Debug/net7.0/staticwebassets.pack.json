@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\YTRAWPADotNet7.bundle.scp.css"
     },
     {
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\1a.png",
+      "PackagePath": "staticwebassets\\Images\\1a.png"
+    },
+    {
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\4a.png",
+      "PackagePath": "staticwebassets\\Images\\4a.png"
+    },
+    {
+      "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\6a.png",
+      "PackagePath": "staticwebassets\\Images\\6a.png"
+    },
+    {
       "Id": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },

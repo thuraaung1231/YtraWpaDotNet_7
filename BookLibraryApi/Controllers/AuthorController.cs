@@ -2,7 +2,9 @@
 using BookLibraryDTO.Services;
 using Microsoft.AspNetCore.Mvc;
 using Refit;
+using Serilog;
 using System.Text.Json.Serialization;
+
 
 namespace BookLibraryApi.Controllers
 {
@@ -19,6 +21,7 @@ namespace BookLibraryApi.Controllers
         [HttpPost]
         [Route("CreateAuthor")]
         public Task <ResponseModel> CreateAuthor(AuthorEntity authorEntity) { 
+            
         ResponseModel response= new ResponseModel();
             response = _authorService.Create(authorEntity);
         
@@ -28,6 +31,7 @@ namespace BookLibraryApi.Controllers
         [Route("ListAuthor")]
         public Task<ResponseModel> ListAuthor()
         {
+            Log.Information("Reached in the API");
             ResponseModel response = new ResponseModel();
             response = _authorService.list();
 
@@ -54,7 +58,7 @@ namespace BookLibraryApi.Controllers
             return Task.FromResult(response);
         }
         [HttpPost]
-        [Route("GetByAuthorId")]
+        [Route("GetByAuthorId/{id}")]
         public Task<ResponseModel> GetByAuthorId(int id)
         {
             ResponseModel response = new ResponseModel();

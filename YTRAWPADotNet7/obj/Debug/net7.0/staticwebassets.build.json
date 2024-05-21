@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ov1XEs8g7PAXY+qEVbUhRGlXko/aF/a7ca0gzq6zGAg=",
+  "Hash": "aV+qMPJLmJnOs4wDT6vlJOxn6aBfbGTgr9+153ygpAY=",
   "Source": "YTRAWPADotNet7",
   "BasePath": "_content/YTRAWPADotNet7",
   "Mode": "Default",
@@ -304,6 +304,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\1a.png",
+      "SourceId": "YTRAWPADotNet7",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
+      "BasePath": "_content/YTRAWPADotNet7",
+      "RelativePath": "Images/1a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\1a.png"
+    },
+    {
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\4a.png",
+      "SourceId": "YTRAWPADotNet7",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
+      "BasePath": "_content/YTRAWPADotNet7",
+      "RelativePath": "Images/4a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\4a.png"
+    },
+    {
+      "Identity": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\Images\\6a.png",
+      "SourceId": "YTRAWPADotNet7",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\AllC#\\C#Exercises\\GitCollabration\\YtraWpaDotNet_7\\YTRAWPADotNet7\\wwwroot\\",
+      "BasePath": "_content/YTRAWPADotNet7",
+      "RelativePath": "Images/6a.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\6a.png"
     }
   ]
 }

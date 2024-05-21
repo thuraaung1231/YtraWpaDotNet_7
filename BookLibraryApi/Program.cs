@@ -1,5 +1,6 @@
 using BookLibraryDTO.DAO;
 using BookLibraryDTO.Services;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,11 @@ builder.Services.AddScoped<MyDbContext>();
 builder.Services.AddScoped<BookService>();
 builder.Services.AddScoped<AuthorService>();
 
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("logfile/log.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

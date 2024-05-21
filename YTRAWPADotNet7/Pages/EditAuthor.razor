@@ -41,7 +41,7 @@
                 </MudCardContent>
                 <MudCardActions>
                     <MudButton ButtonType="ButtonType.Reset" Variant="Variant.Filled" Class="d-inline-flex ms-auto" Color="Color.Dark">Cancel</MudButton>
-                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ms-2 d-inline-flex" @onclick="@UpdateAuthor">Add Author</MudButton>
+                    <MudButton ButtonType="ButtonType.Submit" Variant="Variant.Filled" Color="Color.Primary" Class="ms-2 d-inline-flex" @onclick="@UpdateAuthor">Update Author</MudButton>
                 </MudCardActions>
             </MudCard>
         </MudItem>
@@ -51,16 +51,19 @@
 @code{
     [Parameter]
     public int id{ get; set; }
+    bool success;
+    IBrowserFile files;
     AuthorEntity authorEntity = new AuthorEntity();
     ResponseModel responseModel = new ResponseModel();
     protected override async Task OnInitializedAsync()
     {
         responseModel = await ApiService.GetByAuthorId(id);
         authorEntity = JsonConvert.DeserializeObject<AuthorEntity>(responseModel.resData.ToString());
+
+        
     }
 
-    bool success;
-    IBrowserFile files;
+   
 
     private void OnValidSubmit(EditContext context)
     {
